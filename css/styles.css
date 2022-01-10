@@ -1,0 +1,73 @@
+body{
+  background-color: white;
+}
+
+.bg-dark{
+  background: #254978 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background-color: #5A6268;
+}
+
+a{
+  color: #343A40;
+}
+
+h5{
+  margin-left: 20px;  
+}
+
+.etiquetaPagar{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+    
+}
+
+header, .alert{
+  z-index: 100;
+}
+
+.description{
+  height: 25px;
+  overflow: hidden;
+  transition: height .3s ease-in .3s;
+}
+
+.carrito{
+  min-height: 80vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.table__productos{
+  display: flex;
+}
+
+.table__productos > img{
+  width: 9rem;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.table__cantidad > input{
+  width: 40px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.hide, .remove{
+  display: none;
+}
+
+.tituloSeccion{
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#bla"  />
+    <title>Marketplace Universitario</title>       
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />   
+    <!-- Animación del tituloSeccion -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>    
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+              <img src="img/logo.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
+                  Marketplace Universitario
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="directorio.html">Directorio Universitario</a></li>                    
+                </ul>
+            </div>
+          </div>          
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-1">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-6 fw-bolder tituloSeccion">Marketplace Universitario</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Al comprar en nuestro Marketplace Universitario ayudarás a darle forma a la educación del futuro. 
+                        Todas las ganancias irán directamente hacia la mejora de nuestra Universidad tanto en infraestructura como en nuestro personal docente y administrativo.</p>
+                </div>
+            </div>
+        </header>
+
+    <header class="container-fluid bg-light position-sticky top-0">
+      <ul
+        class="nav nav-pills mb-3 py-3 container"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+            >Productos</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-contact-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contact"
+            type="button"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+            >Carrito</a
+          >
+        </li>
+        <form class="d-flex">
+          <h5 class="etiquetaPagar" id="checkout">
+            Total a pagar $0:
+          </h5>
+        </form>
+      </ul>
+    </header>
+
+    <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+    ¡Agregado al carrito!
+    </div>
+    <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+      Eliminado del carrito
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade "
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+      >
+        1
+      </div>
+      <div
+        class="tab-pane fade show active container"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+      >       
+
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-light rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Playera</h5>
+              <img src="./img/playera1.jpg" class="card-img-top" alt="playera">
+              <div class="card-body">                
+                <h5 class="text-dark text-center"><span class="precio">$ 40</span></h5>
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-dark mt-auto button botonAgregar" onclick="agregarAlCarrito('productoAComprar_1', productos[0].precio)">Agregar al carrito</button>
+                
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-light rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Sudadera</h5>
+              <!-- Sale badge-->
+              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+              <img src="./img/sudadera1.jpg" class="card-img-top" alt="sudadera">
+              <div class="card-body">                
+                <h5 class="text-dark text-center"><span class="precio">$ 50</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-outline-dark mt-auto button botonAgregar" onclick="agregarAlCarrito('productoAComprar_2', productos[1].precio)">Agregar al carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-light rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Taza</h5>
+              <!-- Sale badge-->
+              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+              <img src="./img/taza1.jpg" class="card-img-top" alt="taza">
+              <div class="card-body">                
+                <h5 class="text-dark text-center"><span class="precio">$ 20</span></h5>
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-dark mt-auto button botonAgregar" onclick="agregarAlCarrito('productoAComprar_3', productos[2].precio)">Agregar al carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-light rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Lapicero</h5>
+              <img src="./img/lapicero1.jpg" class="card-img-top" alt="lapicero">
+              <div class="card-body">                
+                <h5 class="text-dark text-center"><span class="precio">$ 10</span></h5>
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-dark mt-auto button botonAgregar" onclick="agregarAlCarrito('productoAComprar_4', productos[3].precio)">Agregar al carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-light rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Termo</h5>
+              <!-- Sale badge-->
+              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+              <img src="./img/termo1.jpg" class="card-img-top" alt="termo">
+              <div class="card-body">                
+                <h5 class="text-dark text-center"><span class="precio">$ 25</span></h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-dark mt-auto button botonAgregar" onclick="agregarAlCarrito('productoAComprar_5', productos[4].precio)">Agregar al carrito</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-light rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Póster</h5>
+              <!-- Sale badge-->
+              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+              <img src="./img/poster1.jpg" class="card-img-top" alt="poster">
+              <div class="card-body">                
+                <h5 class="text-dark text-center"><span class="precio">$ 15</span></h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-dark mt-auto button botonAgregar" onclick="agregarAlCarrito('productoAComprar_6', productos[5].precio)">Agregar al carrito</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-light| rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Calcetines</h5>
+              <img src="./img/calcetines1.jpg" class="card-img-top" alt="calcetines">
+              <div class="card-body">                
+                <h5 class="text-dark text-center"><span class="precio">$ 20</span></h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-dark mt-auto button botonAgregar" onclick="agregarAlCarrito('productoAComprar_7', productos[6].precio)">Agregar al carrito</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-light rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-dark">Pines</h5>
+              <img src="./img/pin1.jpg" class="card-img-top" alt="pines">
+              <div class="card-body">                
+                <h5 class="text-dark text-center"><span class="precio">$ 10</span></h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-dark mt-auto button botonAgregar" onclick="agregarAlCarrito('productoAComprar_8', productos[7].precio)">Agregar al carrito</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade carrito"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+      <br>
+      <table class="table table-light table-hover">
+        <thead>
+          <tr class="text-dark">
+            <th scope="col">#</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">        
+          
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row mx-4">
+        <div class="col">
+          <h3 class="itemCartTotal text-dark">Total: 0</h3>
+        </div>
+        <div class="col d-flex justify-content-end">          
+          <a class="btn btn-secondary" href="pagar.html">Pagar</a>
+        </div>
+      </div>      
+      </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="py-4 bg-dark">
+      <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Marketplace Universitario 2021</p></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- Archivos Javascript -->
+    <script src="./js/scripts.js"></script>
+    <script src="./js/productos.js"></script>
+  </body>
+</html>
